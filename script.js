@@ -1,6 +1,7 @@
 var aboutSection = document.getElementById("work-experience");
 var dist = aboutSection.getBoundingClientRect()["y"];
-var navToAbout = document.getElementsByTagName("a");
+var nav = document.getElementById("pages")
+var navToAbout = nav.getElementsByTagName("a");
 console.log(navToAbout);
 var target = 0;
 for(var i = 0; i < navToAbout.length; i++){
