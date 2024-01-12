@@ -209,7 +209,7 @@ section:nth-child(2n+1){
     
 }
 .time-period{
-    color: lightgray;
+    color: rgb(130, 129, 129);
     font-weight: lighter;
     font-size: 80%;
     margin: 0;
