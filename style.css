@@ -106,7 +106,7 @@ section:nth-child(2n+1){
 }
 
 #about>p{
-    width: 50%;
+    max-width: 50vw;
     text-align: justify;
     margin: auto;
     margin-top: -10vh;
@@ -223,8 +223,24 @@ section:nth-child(2n+1){
 .timeline-box:nth-child(2n+1) .time-period{
     text-align: right;
 }
-@media screen and (max-width:600px) {
-    .timeline-box:nth-child(2n){
+@media screen and (orientation:portrait) {
+    #body-header{
+        background-size:cover;
+
+    }
+    #pages li{
+        font-size: 30px;
+    }
+    #profile-pic img{
+        margin-top: -6vh;
+    }
+    #about>p{
+        width: 80vw;
+        margin: -3vh 5vh 2vh 5vh;
+        font-size: 16px;
+        
+    }
+    /* .timeline-box:nth-child(2n){
         left: 0%;
         align-items: left;
     }
@@ -245,7 +261,7 @@ section:nth-child(2n+1){
     .timeline-box:nth-child(2n+1)::after{
         right:-14.4%;
         
-    }
+    } */
 }
 .job-description{
     color: rgb(147, 146, 146);
