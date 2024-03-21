@@ -4,6 +4,39 @@ var nav = document.getElementById("pages")
 var navToAbout = nav.getElementsByTagName("a");
 console.log(navToAbout);
 var target = 0;
+// Get the modal
+var modal = document.getElementById("modal")
+var project_modal = document.querySelectorAll(".project-modal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgs = document.querySelectorAll(".project-image > img");
+var modalImg = document.querySelectorAll(".modal-content");
+var captionText = document.querySelectorAll(".caption");
+console.log(imgs)
+for(let i = 0 ; i < imgs.length; i++)
+{
+    imgs[i].onclick = function(){
+        modal.style.display = "block";
+        project_modal[i].style.display = "block";
+        modalImg[i].src = this.src;
+        captionText[i].innerHTML = this.alt;
+      }
+}
+
+
+
+// Get the <span> element that closes the modal
+var spans = document.querySelectorAll(".close");
+
+// When the user clicks on <span> (x), close the modal
+for(let i = 0 ; i < spans.length; i++)
+{
+    spans[i].onclick = function() {
+        modal.style.display = "none";
+        project_modal[i].style.display = "none";
+        }
+}
+
 for(var i = 0; i < navToAbout.length; i++){
 
 
