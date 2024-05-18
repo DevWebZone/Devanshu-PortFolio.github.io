@@ -10,56 +10,114 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <header id="body-header">
-            <nav id="pages">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#work-experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <h1 id="name">
-                Devanshu Wadhwani
-            </h1>
-            <div id="social-links">
-                <ul>
-                    <!-- <li>
-                        <img src="linkedlnlogo.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="googlelogo.png" alt="">
-                    </li>
-                    <li>
-                        <img src="facebooklogo.png" alt="">
-                    </li> -->
-                    <!-- <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li> -->
-                </ul>
-            </div>
-           
-        </header>
-        <main>
-            <section id="about">
-                <div id="profile-pic">
-                    <img src="Devanshu_profilepic.jpg" alt="">
+        <nav id="pages">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work-experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="header-container">
+            <header id="body-header">
+                <div class="content">
+                    <div style="font-size: large; padding-left: 2rem;">
+                        Hi, my name is
+                    </div>
+                    <h1 id="name">
+                    Devanshu Wadhwani.
+                    </h1>
+                    <div class="tagline">
+                        i build things for the web.
+                    </div>
                 </div>
-                <p>
-                    Dedicated Full Stack Developer with more than 1.5 years industry experience at EXL Service and a Bachelor's 
-                    degree in Technology from the National Institute of Technology. Strong 
-                    command of C# (dotNet), HTML, CSS, JavaScript, Python, SQL and MEAN Stack. 
-                    Adept at AWS, Git and React. Successfully completed 2 live end to end client 
-                    projects in C# (dotNet), resulting in more than $100K cost reduction for the 
-                    clients. Committed to continuously challenging myself and expanding my 
-                    knowledge in web development.
-                </p>
+                <div class="side-image">
+                   <img src="back.jpg" alt="">
+                </div>
+               
+            </header>
+            <header id="about">
+                    <div class="info">
+                        <h1>
+                            ABOUT ME
+                        </h1>
+                        <p>
+                            Dedicated Full Stack Developer with more than 1.5 years industry experience at EXL Service and a Bachelor's 
+                            degree in Technology from the National Institute of Technology. Strong 
+                            command of C# (dotNet), HTML, CSS, JavaScript, Python, SQL and MEAN Stack. 
+                            Adept at AWS, Git and React. Successfully completed 2 live end to end client 
+                            projects in C# (dotNet), resulting in more than $100K cost reduction for the 
+                            clients. Committed to continuously challenging myself and expanding my 
+                            knowledge in web development.
+                        </p>
+                    </div>
+                    <div id="profile-pic">
+                        <!-- <img src="back.jpg" alt=""> -->
+                    </div>
+            </header>
+        </div>
+        
+        <main>
+            
+            <section id="skills">
+                <h1 class="heading-style">
+                    <span>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </span>
+                    <span>SKILLS</span>
+                </h1>
+                <div id ="skills-container" class="skills-display">
+                    <div class="skill-progress">
+                        <div class="eighty-five-percent mb-blue"  data-bar-width = "85">
+                            <div class="skill-name">
+                                <span>.Net &nbsp;(C#)</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="eighty-five-percent mb-yellow"  data-bar-width = "85">
+                            <div class="skill-name">
+                                <span>JavaScript</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="eighty-five-percent mb-red"  data-bar-width = "85">
+                            <div class="skill-name">
+                                <span>MEAN&nbsp;Stack</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="Ninety-percent mb-green" data-bar-width = "90">
+                            <div class="skill-name">
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="eighty-five-percent mb-purple" data-bar-width = "80">
+                            <div class="skill-name">
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="eighty-percent mb-lightblue" data-bar-width = "75">
+                            <div class="skill-name">
+                                <span>Angular</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+         
             <section id="portfolio">
                 <h1 class="heading-style">
                     <span>
@@ -145,64 +203,7 @@
                     </div>
                 </div>
             </section>
-            <section id="skills">
-                <h1 class="heading-style">
-                    <span>
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </span>
-                    <span>SKILLS</span>
-                </h1>
-                <div id ="skills-container" class="skills-display">
-                    <div class="skill-progress">
-                        <div class="eighty-five-percent mb-blue"  data-bar-width = "85">
-                            <div class="skill-name">
-                                <span>.Net &nbsp;(C#)</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="eighty-five-percent mb-yellow"  data-bar-width = "85">
-                            <div class="skill-name">
-                                <span>JavaScript</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="eighty-five-percent mb-red"  data-bar-width = "85">
-                            <div class="skill-name">
-                                <span>MEAN&nbsp;Stack</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="Ninety-percent mb-green" data-bar-width = "90">
-                            <div class="skill-name">
-                                <span>Python</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="eighty-five-percent mb-purple" data-bar-width = "80">
-                            <div class="skill-name">
-                                <span>SQL</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="eighty-percent mb-lightblue" data-bar-width = "75">
-                            <div class="skill-name">
-                                <span>Angular</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-    
-            </section>
-            <section id="work-experience">
+             <section id="work-experience">
                 <h1 class="heading-style">
                     <span>
                         <i class="fas fa-briefcase"></i>

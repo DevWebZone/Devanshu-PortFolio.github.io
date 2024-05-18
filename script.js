@@ -4,6 +4,24 @@ var nav = document.getElementById("pages")
 var navToAbout = nav.getElementsByTagName("a");
 console.log(navToAbout);
 var target = 0;
+//about section 
+var about = document.getElementById("about");
+var header = document.getElementById("body-header");
+setInterval(function () {
+    let marginLeft = about.style.marginLeft;
+    if(marginLeft == "0vw")
+        {
+            about.style.marginLeft = "100vw";
+            header.style.marginLeft = "0vw";
+        }
+       
+    else
+    {
+        header.style.marginLeft = "-100vw";
+        about.style.marginLeft = "0vw";
+    }
+        
+}, 3000);
 // Get the modal
 var modal = document.getElementById("modal")
 var project_modal = document.querySelectorAll(".project-modal");
@@ -43,7 +61,7 @@ for(var i = 0; i < navToAbout.length; i++){
     navToAbout[i].addEventListener(
         'click', 
                 function(event){
-                    event.preventDefault();
+                 //   event.preventDefault();
                     var target = 0;
                     var targetSectionID = this.getAttribute('href');
                     var targetSection = document.querySelector(targetSectionID);
