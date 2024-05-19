@@ -1,27 +1,58 @@
 var aboutSection = document.getElementById("work-experience");
 var dist = aboutSection.getBoundingClientRect()["y"];
 var nav = document.getElementById("pages")
-var navToAbout = nav.getElementsByTagName("a");
+var navToAbout = nav.querySelectorAll("#pages a");
 console.log(navToAbout);
 var target = 0;
 //about section 
 var about = document.getElementById("about");
 var header = document.getElementById("body-header");
-setInterval(function () {
-    let marginLeft = about.style.marginLeft;
-    if(marginLeft == "0vw")
-        {
-            about.style.marginLeft = "100vw";
-            header.style.marginLeft = "0vw";
-        }
-       
-    else
+var sliders =  document.querySelectorAll(".slider div");
+
+var icons =  document.querySelectorAll(".icon");
+var sliderInterval =    setInterval(function () {
+                            let marginLeft = about.style.marginLeft;
+                            if(marginLeft == "0vw")
+                                {
+                                    about.style.marginLeft = "100vw";
+                                    header.style.marginLeft = "0vw";
+                                    icons[0].classList.add("active");
+                                    icons[1].classList.remove("active");
+                                }
+                            
+                            else
+                            {
+                                header.style.marginLeft = "-100vw";
+                                about.style.marginLeft = "0vw";
+                                icons[1].classList.add("active");
+                                icons[0].classList.remove("active");
+                            }
+                                
+                        }, 3000);
+
+for(let i = 0; i< sliders.length; i++)
     {
-        header.style.marginLeft = "-100vw";
-        about.style.marginLeft = "0vw";
+        sliders[i].addEventListener('click', 
+            function(){
+                clearInterval(sliderInterval);
+                if(i==0)
+                {
+                    about.style.marginLeft = "100vw";
+                    header.style.marginLeft = "0vw";
+                    icons[0].classList.add("active");
+                    icons[1].classList.remove("active");
+                }
+                
+                else
+                {
+                    header.style.marginLeft = "-100vw";
+                    about.style.marginLeft = "0vw";
+                    icons[1].classList.add("active");
+                    icons[0].classList.remove("active");
+                }
+            }
+        )
     }
-        
-}, 3000);
 // Get the modal
 var modal = document.getElementById("modal")
 var project_modal = document.querySelectorAll(".project-modal");
@@ -61,19 +92,33 @@ for(var i = 0; i < navToAbout.length; i++){
     navToAbout[i].addEventListener(
         'click', 
                 function(event){
-                 //   event.preventDefault();
+                    event.preventDefault();
                     var target = 0;
                     var targetSectionID = this.getAttribute('href');
                     var targetSection = document.querySelector(targetSectionID);
                     dist = targetSection.getBoundingClientRect()["y"];
                     console.log(targetSection);
+                    console.log(target);
+                    console.log(dist);
+                    if(target < dist)
+                        var scrollInterval = setInterval(function () {
+                            if (target >= dist){
+                                clearInterval(scrollInterval);
+                                return;
+                            }
+                            target +=100;
+                            window.scrollBy(0, 100);
+                            console.log(target);
+                            console.log(dist);
+                        }, 15);
+                    else
                     var scrollInterval = setInterval(function () {
-                        if (target >= dist){
+                        if (target < dist){
                             clearInterval(scrollInterval);
                             return;
                         }
-                        target +=50;
-                        window.scrollBy(0, 50);
+                        target -=100;
+                        window.scrollBy(0, -100);
                         console.log(target);
                         console.log(dist);
                     }, 15);

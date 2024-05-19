@@ -87,6 +87,57 @@ body {
     height: 100%;
     object-fit:cover;
 }
+.slider{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    z-index: 20;
+    top: 0%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+.slider div{
+   
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+.left{
+    text-align: right;
+}
+.left .icon{
+    right: 1%;
+}
+.right{
+    text-align: left;
+}
+.right .icon{
+    left: 1%;
+}
+.slider div:hover{
+   cursor: pointer;
+   color: gray;
+   opacity: 0.6;
+}
+
+.icon{
+    position: absolute;
+    top: 96%;
+    font-size: 12px;
+    transition: all 0.2s;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+.active{
+    color: whitesmoke;
+}
+.icon:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    opacity: 0.6;
+}
 section{
     width: 100%;
     display: flex;
@@ -159,11 +210,15 @@ section:nth-child(2n+1){
     margin-right: 0.5rem;
 }
 
-
+#skills{
+    box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+    height: 50vh;
+}
 .skills-display{
     width: 80%;
     /* height: 100px;
     border: 2px solid black; */
+    margin-top: 6vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
