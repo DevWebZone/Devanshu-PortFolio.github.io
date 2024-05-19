@@ -12,7 +12,7 @@ body {
     overflow: hidden;
 }
 #body-header{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     opacity: 0.8;
     display: flex;
@@ -176,17 +176,18 @@ section:nth-child(2n+1){
     box-shadow: 0px 0px 3px 2px rgba(230, 196, 196, 0.3);   
 }
 .info{
-    text-align: center;
-    width: 35%;
-    margin-left: 80px;
+    text-align: left;
 }
 .info h1{
+    color: rgb(21,33,54);
+    text-align: left;
+    font-size: 40px;
+    margin: 5px 0px 10px -5px;
+    padding-left: 2rem;
     letter-spacing: 3px;
     word-spacing: 10px;
-
 }
 #about p{
-    text-align: justify;
     font-size: medium;
     color: rgb(79, 79, 79);
     font-style: italic;
@@ -308,12 +309,15 @@ section:nth-child(2n+1){
     text-align: right;
 }
 @media screen and (orientation:portrait) {
+    #header-container{
+        height: 40vh;
+    }
     #body-header{
         background-size:cover;
 
     }
     #pages li{
-        font-size: 30px;
+        font-size: 20px;
     }
     #profile-pic img{
         margin-top: -6vh;
