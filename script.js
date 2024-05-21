@@ -28,7 +28,7 @@ var sliderInterval =    setInterval(function () {
                                 icons[0].classList.remove("active");
                             }
                                 
-                        }, 2000);
+                        }, 3000);
 
 for(let i = 0; i< sliders.length; i++)
     {

@@ -6,7 +6,7 @@ body {
     width: 100vw;
 }
 #header-container{
-    height: 100vh;
+    height: 60vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -38,7 +38,7 @@ body {
     
     padding-left: 2rem;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 36px;
     word-spacing: 3px;
     color: rgb(74, 88, 110);
 }
@@ -72,7 +72,7 @@ body {
 #body-header h1{
     color: rgb(21,33,54);
     text-align: left;
-    font-size: 48px;
+    font-size: 36px;
     margin: 5px 0px 10px -5px;
     padding-left: 2rem;
       
@@ -85,7 +85,7 @@ body {
 .side-image>img{
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit:scale-down;
 }
 .slider{
     position: absolute;
@@ -155,7 +155,7 @@ section:nth-child(2n+1){
 
 #about{
     transition: margin-left 1s ease-in-out;
-    margin-top: -100vh;
+    margin-top: -60vh;
     margin-left: 100vw;
     height: 100%;
     width: 100%;
@@ -181,14 +181,14 @@ section:nth-child(2n+1){
 .info h1{
     color: rgb(21,33,54);
     text-align: left;
-    font-size: 40px;
+    font-size: 36px;
     margin: 5px 0px 10px -5px;
     padding-left: 2rem;
-    letter-spacing: 3px;
-    word-spacing: 10px;
+    letter-spacing: 2px;
+    word-spacing: 8px;
 }
 #about p{
-    font-size: medium;
+    font-size: 36px;
     color: rgb(79, 79, 79);
     font-style: italic;
     text-shadow: 3px lightgray;
@@ -380,7 +380,7 @@ section:nth-child(2n+1){
     height: 100%;
     padding: 0px;
     margin: 0px;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     grid-template-columns: 400px 400px;
     grid-row: auto auto;
     justify-content: space-around;
