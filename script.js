@@ -102,11 +102,11 @@ for(var i = 0; i < navToAbout.length; i++){
                     console.log(dist);
                     if(target < dist)
                         var scrollInterval = setInterval(function () {
+                            target +=100;
                             if (target >= dist){
                                 clearInterval(scrollInterval);
                                 return;
                             }
-                            target +=100;
                             window.scrollBy(0, 100);
                             console.log(target);
                             console.log(dist);
